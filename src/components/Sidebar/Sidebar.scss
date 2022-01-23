@@ -1,0 +1,29 @@
+.sidebar-container{
+    width: 20%;
+    min-height: 90vh;
+    background-color: #0dcaf0;
+    ul{
+        padding: 0;
+        .movies-list{
+            padding: 11px 13px;
+            list-style: none;
+            transition: all 0.3s;
+
+              &.active{
+                background: white;
+                a{
+                    color: #000;
+                    
+                }
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 22px;
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+}
