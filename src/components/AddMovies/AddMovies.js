@@ -69,7 +69,7 @@ function AddMovie() {
                     <div className="row mb-3">
                         <label htmlFor="movies-rating" className="form-label">Movies Rating</label>
                         <select value={rating} className="form-control" name="rating" id="rating" onChange={(e) => setRating(e.target.value)}>
-                            <option value="0">0</option>
+                            <option value="0">--</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

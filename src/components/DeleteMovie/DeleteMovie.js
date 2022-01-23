@@ -1,8 +1,17 @@
 import React from "react";
+import deleteMovie from "../../api/deleteMovie";
 
 function DeleteMovie(props) {
 
-    const closeModal=()=>{
+    const deleteSelectedMovie = async () => {
+        const data = await deleteMovie({
+            id: props.deleteSelectedMovie.id
+        });
+        props.refreshPage();
+        closeModal();
+    }
+
+    const closeModal = () => {
         props.hideDeleteModal();
     }
 
@@ -21,7 +30,7 @@ function DeleteMovie(props) {
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModal}>No</button>
-                            <button type="button" class="btn btn-primary">Yes</button>
+                            <button type="button" class="btn btn-primary" onClick={deleteSelectedMovie}>Yes</button>
                         </div>
                     </div>
                 </div>
